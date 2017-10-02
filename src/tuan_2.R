@@ -37,7 +37,18 @@ ham4 <- function(data11) {
         height = c(height, (data11[, 2][i] - data11[, 1][i])/data[, 
             3][i])
     }
-    cat("min: ", min(height),"\n")
-    cat("max: ", max(height),"\n")
-    cat("medium: ", mean(height),"\n")
+    cat("min: ", min(height), "\n")
+    cat("max: ", max(height), "\n")
+    cat("medium: ", mean(height), "\n")
+}
+
+# bai 5
+phanvi = function(X, p) {
+    kq = c()
+    n = length(X)
+    X = sort(X, decreasing = FALSE)
+    L = (p/100) * n
+    if (L == round(L)) 
+        kq = c(kq, (X[L] + X[L + 1])/2) else kq = c(kq, X[round(L)])
+    return(kq)
 }
