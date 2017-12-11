@@ -4,8 +4,7 @@ integrate(f, lower = 0, upper = 0.2)  # P(X<=.2)
 integrate(f, lower = 0, upper = 1)  # kiem tra ham mat do
 
 # bai 2
-x = sample(1:5, 100, replace = TRUE, prob = c(0.1, 0.2, 0.4, 
-    0.2, 0.1))
+x = sample(1:5, 100, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1))
 table(x)/100
 
 # vi du 1
