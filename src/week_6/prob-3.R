@@ -1,0 +1,16 @@
+sv <- c(1:10)
+qu1 <- c(3, 3, 3, 4, 3, 4, 3, 4, 3, 4)
+qu2 <- c(5, 3, 5, 5, 2, 2, 5, 5, 4, 2)
+qu3 <- c(1, 3, 1, 1, 1, 3, 1, 1, 1, 1)
+
+dat <- data.frame(sv, qu1, qu2, qu3)
+print(data.frame(sv, qu1, qu2))
+# Ve
+par(mfrow = c(3, 1))
+barplot(dat$qu1, xlab = "sv", ylab = "diem", main = "qu1")
+barplot(dat$qu2, xlab = "sv", ylab = "diem", main = "qu1")
+barplot(dat$qu3, xlab = "sv", ylab = "diem", main = "qu1")
+x11()
+par(mfrow = c(2, 1))
+barplot(dat$qu2, xlab = "sv", ylab = "diem", main = "qu1", horiz = T)
+barplot(dat$qu3, xlab = "sv", ylab = "diem", main = "qu1", horiz = T)
