@@ -1,0 +1,12 @@
+ktc.tb<-function(tb,lechChuan,n,alpha)
+{
+    if(n<30)
+    {
+	eps=qt(1-alpha/2,df=n-1)*lechChuan/sqrt(n)
+    }
+    else
+    {
+	eps=qnorm(1-alpha/2)*lechChuan/sqrt(n)
+    }
+    c(tb-eps,tb+eps)
+}
