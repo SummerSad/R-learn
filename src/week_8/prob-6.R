@@ -14,7 +14,7 @@ if (a_result$p.value <= alpha) {
 proptest.geq <- function(f, n, p0, alpha) {
     # H1 p > p0
     z0 = (f/n - p0)/sqrt(p0 * (1 - p0)/n)
-    p.value = 1 - pnorm(z0)
+    p.value = 1 - qnorm(z0)
     cat("p: ", p.value, "\n")
     if (p.value <= alpha) {
         cat("Bac bo H0", "\n")
@@ -28,7 +28,8 @@ proptest.geq(length(tg_gr5), length(tg_hoc$KHTN), 0.5, alpha)
 proptest.leq <- function(f, n, p0, alpha) {
     # H1 p > p0
     z0 = (f/n - p0)/sqrt(p0 * (1 - p0)/n)
-    p.value = pnorm(z0)
+    cat(z0, "\n")
+    p.value = qnorm(z0)
     cat("p: ", p.value, "\n")
     if (p.value <= alpha) {
         cat("Bac bo H0", "\n")
